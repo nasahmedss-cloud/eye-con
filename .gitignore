@@ -7,3 +7,4 @@ coverage/
 .env*
 !.env.example
 apex-v1.4-clean
+.kilo
