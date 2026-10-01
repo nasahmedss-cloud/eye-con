@@ -1,0 +1,8 @@
+# Netlify Redirects for EYE CON Optical SPA
+# Valid root path — serve index.html normally (200)
+/   /index.html  200
+
+# SPA fallback — all unknown paths serve index.html with HTTP 404 status.
+# React app detects non-root pathname and renders the custom NotFound page.
+# This preserves correct HTTP 404 semantics (avoids soft-404 SEO problem).
+/*  /index.html  404

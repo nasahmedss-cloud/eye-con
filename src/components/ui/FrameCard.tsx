@@ -36,10 +36,13 @@ export default function FrameCard({ frame, onOpenDetails }: FrameCardProps) {
       <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden cursor-pointer" onClick={() => onOpenDetails(frame)}>
         <img
           src={frame.imageUrl}
-          alt={frame.name}
+          alt={`${frame.name} eyeglasses frame at EYE CON Optical, Bokaro`}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           referrerPolicy="no-referrer"
           loading="lazy"
+          decoding="async"
+          width={400}
+          height={300}
         />
         {/* Hover overlay with button */}
         <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -49,7 +52,8 @@ export default function FrameCard({ frame, onOpenDetails }: FrameCardProps) {
               onOpenDetails(frame);
             }}
             className="p-3 bg-white text-[#0F4C81] rounded-sm shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 cursor-pointer hover:bg-[#0F4C81] hover:text-white"
-            title="Inspect frame details"
+            aria-label={`View details for ${frame.name}`}
+            title={`Inspect ${frame.name} details`}
           >
             <Eye className="w-5 h-5" />
           </button>

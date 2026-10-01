@@ -54,9 +54,13 @@ export default function FrameDetailsModal({ frame, onClose }: FrameDetailsModalP
           <div className="md:col-span-6 bg-slate-50 relative min-h-[280px] md:min-h-full">
             <img
               src={frame.imageUrl}
-              alt={frame.name}
+              alt={`${frame.name} eyeglasses — detailed view at EYE CON Optical, Bokaro`}
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
+              width={600}
+              height={600}
             />
             {/* Subtle aesthetic overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 to-transparent pointer-events-none" />

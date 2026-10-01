@@ -104,10 +104,10 @@ export default function Contact() {
                   <h4 className="font-sans font-bold text-slate-800 text-xs uppercase tracking-wider font-mono">Store Call</h4>
                   <a href="tel:+918521021005" className="text-slate-600 font-sans text-xs underline font-semibold block mt-1">+91 85210 21005</a>
                 </div>
-                <div className="p-4 rounded-sm bg-slate-50 border border-[#E2E8F0] hover:bg-slate-100/10 transition-colors text-left space-y-2">
+                <div className="p-4 rounded-sm bg-slate-50 border border-[#E2E8F0] hover:bg-slate-100/10 transition-colors text-left space-y-2 min-w-0 overflow-hidden">
                   <Mail className="w-4 h-4 text-[#FF8C42]" />
                   <h4 className="font-sans font-bold text-slate-800 text-xs uppercase tracking-wider font-mono">Email Support</h4>
-                  <a href="mailto:eyecon.bokaro@gmail.com" className="text-slate-600 font-sans text-xs underline font-semibold block mt-1">eyecon.bokaro@gmail.com</a>
+                  <a href="mailto:eyecon.bokaro@gmail.com" className="text-slate-600 font-sans text-xs underline font-semibold block mt-1 break-all">eyecon.bokaro@gmail.com</a>
                 </div>
               </div>
             </div>

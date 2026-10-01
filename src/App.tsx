@@ -8,6 +8,7 @@ import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import Footer from './components/layout/Footer';
 import WhatsAppButton from './components/ui/WhatsAppButton';
+import NotFound from './pages/NotFound';
 import { Frame } from './types';
 
 // Code-split below-the-fold components for instant FCP & LCP (< 1.5s)
@@ -18,8 +19,20 @@ const Location = lazy(() => import('./components/sections/Location'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 const FrameDetailsModal = lazy(() => import('./components/ui/FrameDetailsModal'));
 
+// Determine if the current URL path is a known valid SPA path.
+// Valid paths: '/' or any path starting with '/#' (anchor navigation)
+function isValidPath(): boolean {
+  const { pathname } = window.location;
+  return pathname === '/' || pathname === '';
+}
+
 export default function App() {
   const [selectedFrame, setSelectedFrame] = useState<Frame | null>(null);
+
+  // Show custom 404 for any URL path that isn't root '/'
+  if (!isValidPath()) {
+    return <NotFound />;
+  }
 
   return (
     <div className="min-h-screen bg-brand-bg text-brand-slate font-sans antialiased overflow-x-hidden flex flex-col">
@@ -68,5 +81,6 @@ export default function App() {
     </div>
   );
 }
+
 
 

@@ -94,15 +94,16 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, 'home')}
             className="inline-flex items-center group cursor-pointer"
           >
-            <picture>
+                      <picture>
               <source srcSet={logoWebp} type="image/webp" />
               <img
                 src={logoPng}
-                alt="EYE CON Logo"
+                alt="EYE CON Optical — Premium Eyewear Store, Bokaro Steel City"
                 className="h-24 w-auto object-contain bg-transparent"
                 width={200}
                 height={96}
                 decoding="async"
+                fetchPriority="high"
               />
             </picture>
           </a>

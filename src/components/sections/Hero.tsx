@@ -96,7 +96,7 @@ export default function Hero() {
               <source srcSet={heroDisplayWebp} type="image/webp" />
               <img
                 src={heroDisplayPng}
-                alt="EYE CON Premium Eyewear Interior Showroom"
+                alt="Premium eyewear collection display at EYE CON Optical showroom, Bokaro Steel City"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
                 loading="eager"
@@ -104,6 +104,7 @@ export default function Hero() {
                 decoding="async"
                 width={1376}
                 height={768}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
               />
             </picture>
             {/* Ambient vignette overlay */}

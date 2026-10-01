@@ -4,7 +4,8 @@
  */
 
 import { Glasses, Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import logo from '../../assets/images/logo.png';
+import logoWebp from '../../assets/images/logo.webp';
+import logoPng from '../../assets/images/logo.png';
 
 export default function Footer() {
   const handleScrollTop = () => {
@@ -30,11 +31,18 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="md:col-span-2 space-y-4">
           <div className="flex items-center gap-3">
-            <img
-              src={logo}
-              alt="EYE CON Logo"
-              className="h-24 w-auto object-contain"
-            />
+            <picture>
+              <source srcSet={logoWebp} type="image/webp" />
+              <img
+                src={logoPng}
+                alt="EYE CON Optical logo — Premium Eyewear Store, Bokaro Steel City"
+                className="h-24 w-auto object-contain"
+                width={200}
+                height={96}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
           <p className="text-sm leading-relaxed max-w-sm">
             Premium, minimal optical frames curated for contemporary styles. Visit our showroom to explore the perfect fit tailored to your personality.

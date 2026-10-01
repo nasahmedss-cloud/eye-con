@@ -29,26 +29,26 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'interior',
     number: '01',
-    title: 'EYEWEAR COLLECTION',
-    subtitle: 'Precision Displays & Premium Lens Showcase',
-    alt: 'EYE CON Interior Optical Frames and Lens Brands Display',
+    title: 'OUR STORE',
+    subtitle: 'Flagship Storefront & Welcoming Entrance',
+    alt: 'Interior of EYE CON Optical store showing eyewear displays and optical frames in Bokaro Steel City',
     webpSrc: interiorWebp,
     jpgSrc: interiorJpg,
     aspectRatio: 'aspect-[4/3] sm:aspect-[16/11]',
-    description: 'Explore our expansive collection of high-density composite acetate, titanium frames, and prescription lenses from world-renowned optical brands.',
-    icon: <Glasses className="w-4 h-4 text-[#FF8C42]" />,
+    description: 'Located in the heart of the optical district, our flagship showroom welcomes you with computerised eye testing facilities and curated eyewear selections.',
+    icon: <Store className="w-4 h-4 text-[#FF8C42]" />,
   },
   {
     id: 'storefront',
     number: '02',
-    title: 'OUR STORE',
-    subtitle: 'Flagship Storefront & Welcoming Entrance',
-    alt: 'EYE CON A Group of Nooral Opticals Storefront Exterior',
+    title: 'EYEWEAR COLLECTION',
+    subtitle: 'Precision Displays & Premium Lens Showcase',
+    alt: 'EYE CON Optical storefront exterior near SBI Bank, Bari Co-operative Colony, Bokaro Steel City, Jharkhand',
     webpSrc: storefrontWebp,
     jpgSrc: storefrontJpg,
     aspectRatio: 'aspect-[4/3] sm:aspect-[16/11]',
-    description: 'Located in the heart of the optical district, our flagship showroom welcomes you with computerised eye testing facilities and curated eyewear selections.',
-    icon: <Store className="w-4 h-4 text-[#FF8C42]" />,
+    description: 'Explore our expansive collection of high-density composite acetate, titanium frames, and prescription lenses from world-renowned optical brands.',
+    icon: <Glasses className="w-4 h-4 text-[#FF8C42]" />,
   },
 ];
 
@@ -175,6 +175,9 @@ export default function ShopGallery() {
                     className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 700px"
                   />
                 </picture>
               </div>
@@ -202,7 +205,7 @@ export default function ShopGallery() {
                   {GALLERY_ITEMS[0].description}
                 </p>
               </div>
-              <span className="text-xs font-mono text-slate-400 shrink-0">INTERIOR</span>
+              <span className="text-xs font-mono text-slate-400 shrink-0">STOREFRONT</span>
             </div>
           </motion.div>
 
@@ -232,6 +235,9 @@ export default function ShopGallery() {
                     className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                     loading="lazy"
                     decoding="async"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 40vw, 500px"
                   />
                 </picture>
               </div>
@@ -259,7 +265,7 @@ export default function ShopGallery() {
                   {GALLERY_ITEMS[1].description}
                 </p>
               </div>
-              <span className="text-xs font-mono text-slate-400 shrink-0">STOREFRONT</span>
+              <span className="text-xs font-mono text-slate-400 shrink-0">INTERIOR</span>
             </div>
           </motion.div>
 
